@@ -5,26 +5,26 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     private float horizontal;
-    private float speed;
-    private float jumpinPower = 16f;
-    private float isFacingRight = true;
+    private float speed = 8f;
+    private float jumpingPower = 35f;
+    private bool isFacingRight = true;
 
-    [SerializeField] private RigidBody2D rb;
+    [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
 
     // Start is called before the first frame update
-    
+
     // Update is called once per frame
     void Update()
     {
         horizontal = Input.GetAxisRaw("Horizontal");
-        
-        if( Input.GetButtonDown("Jump") && IsGrounded())
+
+        if (Input.GetButtonDown("Jump") && IsGrounded())
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
         }
-        if( Input.GetButtonDown("Jump") && rb.velocity.y > 0f)
+        if (Input.GetButtonDown("Jump") && rb.velocity.y > 0f)
         {
             rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
         }
@@ -45,9 +45,9 @@ public class PlayerMovement : MonoBehaviour
 
     private void Flip()
     {
-        if(isFacingRight && horizontal < 0f || !isFacingRight || horizontal > 0f)
+        if (isFacingRight && horizontal < 0f || !isFacingRight && horizontal > 0f)
         {
-            ifFacingRight = !isFacingRight;
+            isFacingRight = !isFacingRight;
             Vector3 localScale = transform.localScale;
             localScale.x *= -1f;
             transform.localScale = localScale;
