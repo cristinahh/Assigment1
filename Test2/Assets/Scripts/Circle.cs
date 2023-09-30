@@ -4,7 +4,7 @@ using UnityEngine;
 // with the up, left, right, and down keys.  Moving the box sprite upwards and letting it
 // fall will increase the number of calls from OnCollisionEnter2D.
 
-public class Example1 : MonoBehaviour
+public class Circle : MonoBehaviour
 {
     public Texture2D tex;
 
@@ -32,7 +32,10 @@ public class Example1 : MonoBehaviour
 
     // called when the cube hits the floor
     void OnCollisionEnter2D(Collision2D col)
-    {
+    { 
+       
         Debug.Log("OnCollisionEnter2D");
     }
+
+
 }
