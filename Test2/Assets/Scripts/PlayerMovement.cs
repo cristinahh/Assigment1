@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -58,20 +59,36 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-
+    private int diamonds = 0;
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if(collision.gameObject.tag == "Diamond")
         {
             SoundManager.PlaySound("PlayerCatch");
+            diamonds++;
+
+            if(diamonds == 3) {
+                Destroy(collision.gameObject);
+                SceneManager.LoadScene(3);
+            }
+
             Destroy(collision.gameObject);
+
+
         }
         if (collision.gameObject.tag == "Balls")
         {
             SoundManager.PlaySound("PlayerHit");
+            Die();
             
         }
 
+    }
+
+    private void Die()
+    {
+        rb.bodyType = RigidbodyType2D.Static; // Change to static because we don't want the player to be able to move and continue playing
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name); // Reloads the level
     }
 
 }
