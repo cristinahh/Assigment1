@@ -10,8 +10,18 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene(1); // Will open the play game scene 
     }
 
+    public void Tutorial()
+    {
+        SceneManager.LoadScene(2); // Will open the Tutorial scene 
+    }
+
     public void QuitGame()
     {
         Application.Quit();
+    }
+
+    public void GoBack()
+    {
+        SceneManager.LoadScene(0);
     }
 }
