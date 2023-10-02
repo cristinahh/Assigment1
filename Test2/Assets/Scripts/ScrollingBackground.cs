@@ -12,10 +12,14 @@ public class ScrollingBackground : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+<<<<<<< Updated upstream
         if (Input.GetAxisRaw("Horizontal")>0)
         {
 
             bgRenderer.material.mainTextureOffset += new Vector2(speed * Time.deltaTime, 0);
         }
+=======
+        bgRenderer.material.mainTextureOffset += new Vector2(speed * Time.deltaTime, 0);
+>>>>>>> Stashed changes
     }
 }
