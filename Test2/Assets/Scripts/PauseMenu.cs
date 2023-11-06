@@ -30,4 +30,12 @@ public class PauseMenu : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         Time.timeScale = 1;
     }
+
+    public void SaveGame()
+    {
+        PlayerPrefs.SetInt("SavedLevel", SceneManager.GetActiveScene().buildIndex);
+        PlayerPrefs.Save();
+        SceneManager.LoadScene("MainMenu");
+        Time.timeScale = 1;
+    }
 }
