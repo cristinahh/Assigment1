@@ -624,9 +624,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 772702442}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 87a077af92ae6ed4fbb011985d22056e, type: 3}
+  m_Script: {fileID: 11500000, guid: 6b0a2d4b0ed2ca84aa9b51893660c9f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volumeTextValue: {fileID: 0}
+  volumeSlider: {fileID: 0}
+  defaultVolume: 1
+  brightnessSlider: {fileID: 0}
+  brightnessTextValue: {fileID: 0}
+  defaultBrightness: 1
+  confirmationPrompt: {fileID: 0}
+  _newGameLevel: 
+  noSavedGameDialog: {fileID: 0}
 --- !u!1001 &1021965389
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1364,7 +1373,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 772702446}
-        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
+        m_TargetAssemblyTypeName: MenuController, Assembly-CSharp
         m_MethodName: GoBack
         m_Mode: 1
         m_Arguments:
