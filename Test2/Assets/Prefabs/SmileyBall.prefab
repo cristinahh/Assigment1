@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2164676915728233872}
   - component: {fileID: 6324399841729180768}
   - component: {fileID: 1322711065587959258}
+  - component: {fileID: 8797686398926647826}
   m_Layer: 0
   m_Name: SmileyBall
   m_TagString: Balls
@@ -148,3 +149,15 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.49999997
+--- !u!114 &8797686398926647826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7562167874543288265}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 784cf144577e243a295b24d3715197f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

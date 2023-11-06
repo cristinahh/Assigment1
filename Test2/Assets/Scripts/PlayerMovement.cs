@@ -20,7 +20,9 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
        
-        horizontal = Input.GetAxisRaw("Horizontal");
+        horizontal = Input.GetAxisRaw("Horizontal");// returns value of -1 0 or 1 depending
+                                                    //on the direction we are moving
+
 
         if (Input.GetButtonDown("Jump") && IsGrounded())
         {
