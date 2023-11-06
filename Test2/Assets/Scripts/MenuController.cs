@@ -52,7 +52,7 @@ public class MenuController : MonoBehaviour
 
     public void TutorialButton()
     {
-        SceneManager.LoadScene(2); // Will open the Tutorial scene 
+        SceneManager.LoadScene(1); // Will open the Tutorial scene 
     }
 
     public void GoBack()
