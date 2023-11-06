@@ -71,7 +71,10 @@ public class PlayerMovement : MonoBehaviour
 
             if(diamonds == 3) {
                 Destroy(collision.gameObject);
-                SceneManager.LoadScene(3);
+                
+                // Change to the next scene
+                int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+                SceneManager.LoadScene(currentSceneIndex + 1);
             }
 
             Destroy(collision.gameObject);
