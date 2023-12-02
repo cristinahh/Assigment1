@@ -60,27 +60,9 @@ public class PlayerMovement : MonoBehaviour
 
         }
     }
-
-    private int diamonds = 0;
+    
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.tag == "Diamond")
-        {
-            SoundManager.PlaySound("PlayerCatch");
-            diamonds++;
-
-            if(diamonds == 3) {
-                Destroy(collision.gameObject);
-                
-                // Change to the next scene
-                int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
-                SceneManager.LoadScene(currentSceneIndex + 1);
-            }
-
-            Destroy(collision.gameObject);
-
-
-        }
         if (collision.gameObject.tag == "Balls")
         {
             SoundManager.PlaySound("PlayerHit");
