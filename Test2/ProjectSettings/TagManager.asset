@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Diamond
   - Balls
+  - Teleporter
   layers:
   - Default
   - TransparentFX
