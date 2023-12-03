@@ -697,6 +697,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Diamond Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 3947024055544079504, guid: 06619ca9ed846c44289978577739a9e1, type: 3}
+      propertyPath: m_fontSize
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 3947024055544079504, guid: 06619ca9ed846c44289978577739a9e1, type: 3}
+      propertyPath: m_margin.z
+      value: -172.61382
+      objectReference: {fileID: 0}
+    - target: {fileID: 3947024055544079504, guid: 06619ca9ed846c44289978577739a9e1, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 60
+      objectReference: {fileID: 0}
     - target: {fileID: 6943909758032150281, guid: 06619ca9ed846c44289978577739a9e1, type: 3}
       propertyPath: m_Pivot.x
       value: 0
